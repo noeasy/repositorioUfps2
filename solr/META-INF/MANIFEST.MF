@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Implementation-Vendor: DuraSpace
+Implementation-Title: DSpace SOLR :: Local Customizations
+Implementation-Version: 5.5
+Implementation-Vendor-Id: org.dspace.modules
+Built-By: root
+Build-Jdk: 1.7.0_151
+Specification-Vendor: DuraSpace
+Specification-Title: DSpace SOLR :: Local Customizations
+Created-By: Apache Maven 3.0.4
+Specification-Version: 5.5
+Archiver-Version: Plexus Archiver
+
