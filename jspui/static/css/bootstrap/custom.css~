@@ -1156,9 +1156,13 @@ blockquote.hero {
 .navbar-collapse ul li ul li a{
 	display:block !important;
 }
-.navbar-collapse ul li ul li:hover a{
+.navbar-collapse ul li ul li a:hover{
 	background-color:#aa1916 !important;
 }
+
+ol li a:hover {
+        color: blue !important;
+    }
 
 
 

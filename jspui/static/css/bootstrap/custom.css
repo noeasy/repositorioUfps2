@@ -1160,6 +1160,10 @@ blockquote.hero {
 	background-color:#aa1916 !important;
 }
 
+ol li a:hover {
+        color: white !important;
+    }
+
 
 
 
