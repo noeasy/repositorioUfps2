@@ -50,7 +50,7 @@
 	<%-- <h1>Authorization to Read</h1> --%>
 
     <h1><fmt:message key="jsp.dspace-admin.wizard-permissions.heading1"/>
-    <dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.site-admin\") + \"#wizard_permissions\"%>"><fmt:message key="jsp.morehelp"/></dspace:popup>
+    <dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.site-admin\") + \"#wizard_permissions\"%>"><i class="fas fa-question-circle fa-xs"></i></dspace:popup>
     </h1>
 
 	<%-- <p>Who has (by default) permission to read new items submitted to this collection? --%>

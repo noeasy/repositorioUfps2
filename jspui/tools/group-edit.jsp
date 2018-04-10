@@ -50,7 +50,7 @@
                nocache="true">
 
 	<h1><fmt:message key="jsp.tools.group-edit.title"/> : <%=group.getName()%> (id: <%=group.getID()%>)
-	<dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.collection-admin\") +\"#groupeditor\"%>"><fmt:message key="jsp.help"/></dspace:popup>
+	<dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.collection-admin\") +\"#groupeditor\"%>"><i class="fas fa-question-circle"></i></dspace:popup>
 	</h1>
     <form name="epersongroup" method="post" action="">
 	<div class="row"><label for="tgroup_name" class="col-md-2">

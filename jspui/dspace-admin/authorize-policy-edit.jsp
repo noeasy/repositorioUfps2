@@ -77,7 +77,7 @@
         <h1><fmt:message key="jsp.dspace-admin.authorize-policy-edit.heading">
             <fmt:param><%= edit_title %></fmt:param>
         </fmt:message>
-        <dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.site-admin\") + \"#authorize\"%>"><fmt:message key="jsp.help"/></dspace:popup>
+        <dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.site-admin\") + \"#authorize\"%>"><i class="fas fa-question-circle fa-xs"></i></dspace:popup>
         </h1>
             
     <form action="<%= request.getContextPath() %>/tools/authorize" method="post">

@@ -45,7 +45,7 @@
                parentlink="/dspace-admin"
                nocache="true">
   
-	<h1><fmt:message key="jsp.dspace-admin.workflow-list.heading"/><dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.site-admin\") + \"#workflow\"%>"><fmt:message key="jsp.help"/></dspace:popup></h1>   
+	<h1><fmt:message key="jsp.dspace-admin.workflow-list.heading"/><dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.site-admin\") + \"#workflow\"%>"><i class="fas fa-question-circle fa-xs"></i></dspace:popup></h1>   
 
    <table class="table" align="center" summary="Table displaying list of currently active workflows">
        <tr>

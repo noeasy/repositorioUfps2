@@ -54,7 +54,7 @@
                parenttitlekey="jsp.administer">
 
 <h1><fmt:message key="jsp.dspace-admin.authorize-advanced.advanced"/>
-<dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.site-admin\") +\"#advancedpolicies\"%>"><fmt:message key="jsp.morehelp"/></dspace:popup>
+<dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.site-admin\") +\"#advancedpolicies\"%>"><i class="fas fa-question-circle fa-xs"></i></dspace:popup>
 </h1>
 
 	<%-- <p>Allows you to do wildcard additions to and clearing

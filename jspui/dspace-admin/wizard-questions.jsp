@@ -52,7 +52,7 @@
                nocache="true">
     <%-- <h1>Describe the Collection</h1> --%>
 <h1><fmt:message key="jsp.dspace-admin.wizard-questions.title"/>
-<dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.site-admin\") + \"#createcollection\"%>"><fmt:message key="jsp.morehelp"/></dspace:popup>
+<dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.site-admin\") + \"#createcollection\"%>"><i class="fas fa-question-circle fa-xs"></i></dspace:popup>
 </h1>
 
     <form action="<%= request.getContextPath() %>/tools/collection-wizard" method="post">

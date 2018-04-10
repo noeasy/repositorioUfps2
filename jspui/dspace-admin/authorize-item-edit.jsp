@@ -81,7 +81,7 @@
         <fmt:param><%= item.getHandle() %></fmt:param>
         <fmt:param><%= item.getID() %></fmt:param>
     </fmt:message>
-	<dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.site-admin\") + \"#itempolicies\"%>"><fmt:message key="jsp.help"/></dspace:popup>
+	<dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.site-admin\") + \"#itempolicies\"%>"><i class="fas fa-question-circle fa-xs"></i></dspace:popup>
     </h1>
 
   <p class="help-block"><fmt:message key="jsp.dspace-admin.authorize-item-edit.text1"/></p>
@@ -91,9 +91,9 @@
   <div class="panel-heading"><fmt:message key="jsp.dspace-admin.authorize-item-edit.item"/></div>
   <div class="panel-body">
     <form method="post" action="">
-      <div class="row col-md-offset-4">
+      <div class="row col-md-offset-5">
           <input type="hidden" name="item_id" value="<%=item.getID()%>" />
-          <input class="btn btn-success col-md-4" type="submit" name="submit_item_add_policy" value="<fmt:message key="jsp.dspace-admin.general.addpolicy"/>" />
+	  <button class="btn btn-success col-md-3" type="submit" name="submit_item_add_policy" ><fmt:message key="jsp.dspace-admin.general.addpolicy"/> <i class="fas fa-plus"></i> </button>
       </div>
     </form>
     <br/>
@@ -126,8 +126,8 @@
                  <form method="post" action=""> 
                      <input type="hidden" name="policy_id" value="<%= rp.getID() %>" />
                      <input type="hidden" name="item_id" value="<%= item.getID() %>" />
-                     <input class="btn btn-primary col-md-4" type="submit" name="submit_item_edit_policy" value="<fmt:message key="jsp.dspace-admin.general.edit"/>" />
-                     <input class="btn btn-danger col-md-4 col-md-offset-1" type="submit" name="submit_item_delete_policy" value="<fmt:message key="jsp.dspace-admin.general.delete"/>" />
+	             <button class="btn btn-default col-md-4" type="submit" name="submit_item_edit_policy"> <i class="fas fa-edit"></i></button>
+		     <button class="btn btn-danger col-md-4 col-md-offset-1" type="submit" name="submit_item_delete_policy"><i class="fas fa-trash-alt"></i></button>
                 </form>  
             </td>
         </tr>
@@ -148,7 +148,7 @@
         // display bundle header w/ID
 
 %>
-	<div class="panel panel-info">
+	<div class="panel panel-primary">
   		<div class="panel-heading">    
         <fmt:message key="jsp.dspace-admin.authorize-item-edit.bundle">
             <fmt:param><%=myBun.getName()%></fmt:param>
@@ -156,10 +156,10 @@
         </fmt:message></div>
 		<div class="panel-body">
         <form method="post" action="">
-      		<div class="row col-md-offset-4">
+      		<div class="row col-md-offset-5">
                 <input type="hidden" name="item_id" value="<%=item.getID()%>" />
                 <input type="hidden" name="bundle_id" value="<%=myBun.getID()%>" />
-                <input class="btn btn-success col-md-4" type="submit" name="submit_bundle_add_policy" value="<fmt:message key="jsp.dspace-admin.general.addpolicy"/>" />
+		<button class="btn btn-success col-md-3" type="submit" name="submit_bundle_add_policy" ><fmt:message key="jsp.dspace-admin.general.addpolicy"/> <i class="fas fa-plus"></i> </button>
             </div>
         </form>
         <br/> 
@@ -193,8 +193,8 @@
                     <input type="hidden" name="policy_id" value="<%= rp.getID() %>" />
                     <input type="hidden" name="item_id" value="<%= item.getID() %>" />
                     <input type="hidden" name="bundle_id" value="<%= myBun.getID() %>" />
-                    <input class="btn btn-primary col-md-4" type="submit" name="submit_item_edit_policy" value="<fmt:message key="jsp.dspace-admin.general.edit"/>" />
-                    <input class="btn btn-danger col-md-4 col-md-offset-1" type="submit" name="submit_item_delete_policy" value="<fmt:message key="jsp.dspace-admin.general.delete"/>" />
+		    <button class="btn btn-default col-md-4" type="submit" name="submit_item_edit_policy"> <i class="fas fa-edit"></i></button>
+		    <button class="btn btn-danger col-md-4 col-md-offset-1" type="submit" name="submit_item_delete_policy"> <i class="fas fa-trash-alt"></i></button>
                 </form>
             </td>
          </tr>
@@ -215,7 +215,7 @@
             // 'add policy'
             // display bitstream's policies
 %>                        
-	<div class="panel panel-success">
+	<div class="panel panel-danger">
   		<div class="panel-heading">  
             <fmt:message key="jsp.dspace-admin.authorize-item-edit.bitstream">
                 <fmt:param><%=myBits.getID()%></fmt:param>
@@ -224,10 +224,10 @@
             
         <div class="panel-body">    
             <form method="post" action="">
-                <div class="row col-md-offset-4">
+                <div class="row col-md-offset-5">
                     <input type="hidden" name="item_id"value="<%=item.getID()%>" />
                     <input type="hidden" name="bitstream_id" value="<%=myBits.getID()%>" />
-                    <input class="btn btn-success col-md-4" type="submit" name="submit_bitstream_add_policy" value="<fmt:message key="jsp.dspace-admin.general.addpolicy"/>" />
+		    <button class="btn btn-success col-md-3" type="submit" name="submit_bitstream_add_policy" ><fmt:message key="jsp.dspace-admin.general.addpolicy"/> <i class="fas fa-plus"></i> </button>
                 </div>
             </form>
             <br/>
@@ -261,8 +261,8 @@
                     <input type="hidden" name="policy_id" value="<%= rp.getID()     %>" />
                     <input type="hidden" name="item_id" value="<%= item.getID()   %>" />
                     <input type="hidden" name="bitstream_id" value="<%= myBits.getID() %>" />
-                    <input class="btn btn-primary col-md-4" type="submit" name="submit_item_edit_policy" value="<fmt:message key="jsp.dspace-admin.general.edit"/>" />
-                    <input class="btn btn-danger col-md-4 col-md-offset-1" type="submit" name="submit_item_delete_policy" value="<fmt:message key="jsp.dspace-admin.general.delete"/>" />
+	            <button class="btn btn-default col-md-4" type="submit" name="submit_item_edit_policy"> <i class="fas fa-edit"></i></button>
+		    <button class="btn btn-danger col-md-4 col-md-offset-1" type="submit" name="submit_item_delete_policy"> <i class="fas fa-trash-alt"></i></button>
                  </form>  
             </td>
         </tr>

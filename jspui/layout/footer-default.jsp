@@ -38,19 +38,7 @@
 </div>
 </main>
             <%-- Page footer --%>
-<!--
-             <footer class="navbar navbar-inverse navbar-bottom">
-             <div id="designedby" class="container text-muted">
-           <a href="http://www.ufps.edu.co"><img
-                                    src="<%= request.getContextPath() %>/image/logoufpsvertical.png"
-                                    alt="Logo CINECA" /></a>
 
-			<div id="footer_feedback" class="pull-right">                         <p class="text-muted">DEPARTAMENTE DE INGENIERIA DE SISTEMAS</p>            
-                                <p class="text-muted">DESAROLLADO POR:Bayardo Dandenys Pineda Mogollon, Oscar Andres Gelves SOler</p>
-                                </div>
-			</div>
-    </footer>
--->
 <!--=== Footer Version 1 ===-->
 <!-- organismos de control -->
 <div class="footer-v1 off-container">
@@ -60,7 +48,7 @@
                 <!-- About -->
                 <div class="col-md-3 col-sm-4 md-margin-bottom-40">
                     <div class="footer-main">
-                        <a href="index.html"><img id="logo-footer" class="img-responsive" src="https://ww2.ufps.edu.co/public/imagenes/template/footer/logoufpsvertical.png" alt="Logo Pie de Página UFPS"></a>
+                        <a href="index.html"><img id="logo-footer" class="img-responsive" src="<%= request.getContextPath() %>/image/logoufpsvertical.png" alt="Logo Pie de Página UFPS"></a>
                     </div>
                 </div><!--/col-md-3-->
                 <!-- End About -->
@@ -173,7 +161,7 @@
 
 </div><!--=== End Footer Version 1 ===-->
 
-
+<!--
 </script><script type="text/javascript" src="https://ww2.ufps.edu.co/assets/plugins/owl-carousel/owl-carousel/owl.carousel.min.js">
 </script><script type="text/javascript" src="https://ww2.ufps.edu.co/assets/plugins/horizontal-parallax/js/sequence.jquery-min.js">
 </script><script type="text/javascript" src="https://ww2.ufps.edu.co/assets/plugins/layer-slider/layerslider/js/greensock.js">
@@ -185,8 +173,18 @@
 </script><script type="text/javascript" src="https://ww2.ufps.edu.co/assets/plugins/scrollbar/js/jquery.mCustomScrollbar.concat.min.js"></script>
 
 </script><script type="text/javascript" src="https://ww2.ufps.edu.co/assets/plugins/wow-animations/js/wow.min.js"></script>
-
-
+-->
+<script type='text/javascript' src="<%= request.getContextPath() %>/static/js/Ufps/owl.carousel.min.js"></script>
+<script type='text/javascript' src="<%= request.getContextPath() %>/static/js/Ufps/sequence.jquery-min.js"></script>
+<script type='text/javascript' src="<%= request.getContextPath() %>/static/js/Ufps/greensock.js"></script>
+<script type='text/javascript' src="<%= request.getContextPath() %>/static/js/Ufps/owl.carousel.min.js"></script>
+<script type='text/javascript' src="<%= request.getContextPath() %>/static/js/Ufps/layerslider.transitions.js"></script>
+<script type='text/javascript' src="<%= request.getContextPath() %>/static/js/Ufps/layerslider.kreaturamedia.jquery.js"></script>
+<script type='text/javascript' src="<%= request.getContextPath() %>/static/js/Ufps/custom.min.js"></script>
+<script type='text/javascript' src="<%= request.getContextPath() %>/static/js/Ufps/app.min.js"></script>
+<script type='text/javascript' src="<%= request.getContextPath() %>/static/js/Ufps/powl-carousel.min.js"></script>
+<script type='text/javascript' src="<%= request.getContextPath() %>/static/js/Ufps/jquery.mCustomScrollbar.concat.min.js"></script>
+<script type='text/javascript' src="<%= request.getContextPath() %>/static/js/Ufps/wow.min.js"></script>
 
 
 

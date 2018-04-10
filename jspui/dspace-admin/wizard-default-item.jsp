@@ -45,7 +45,7 @@
 	<h1><fmt:message key="jsp.dspace-admin.wizard-default-item.enter"/></h1>
       </td>
       <td class="standard" align="right">
-        <dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.site-admin\") + \"#wizard_default\"%>"><fmt:message key="jsp.help"/></dspace:popup>
+        <dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.site-admin\") + \"#wizard_default\"%>"><i class="fas fa-question-circle fa-xs"></i></dspace:popup>
       </td>
     </tr>
   </table>

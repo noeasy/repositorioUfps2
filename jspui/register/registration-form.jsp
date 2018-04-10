@@ -113,7 +113,11 @@
         
         <%-- <p align="center"><input type="submit" name="submit" value="Complete Registration"></p> --%>
        	<div class="col-md-offset-5">       
-	   		<input class="btn btn-success col-md-4" type="submit" name="submit" value="<fmt:message key="jsp.register.registration-form.complete.button"/>" />
+	   		
+			<button class="btn btn-danger col-md-4" type="submit" name="submit">
+				<fmt:message key="jsp.register.registration-form.complete.button"/>
+				<i class="fas fa-sign-in-alt"></i>
+			</button>
 	 	</div>
 		
     </form>

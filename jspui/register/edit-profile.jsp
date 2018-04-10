@@ -48,7 +48,7 @@
 
     <%-- <h1>Edit Your Profile</h1> --%>
 	<h1><fmt:message key="jsp.register.edit-profile.title"/>
-	<dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.index\") + \"#editprofile\"%>"><fmt:message key="jsp.morehelp"/></dspace:popup>
+	<dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.index\") + \"#editprofile\"%>"><i class="fas fa-question-circle fa-xs"></i></dspace:popup>
 	</h1>
     
 <%
@@ -102,9 +102,9 @@
 <%
   }
 %>
-	<div class="col-md-offset-5">
+	<div class="col-md-offset-6">
        <%-- <p align="center"><input type="submit" name="submit" value="Update Profile"></p> --%>
-	   <input class="btn btn-success col-md-4" type="submit" name="submit" value="<fmt:message key="jsp.register.edit-profile.update.button"/>" />
-	 </div>
+	   <input class="btn btn-danger" type="submit" name="submit" value="<fmt:message key="jsp.register.edit-profile.update.button"/>" />
+	 </div> <!--col-md-4 5  -->
     </form>
 </dspace:layout>

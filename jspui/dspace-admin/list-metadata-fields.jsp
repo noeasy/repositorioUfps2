@@ -52,7 +52,7 @@
        	 <a href="<%=request.getContextPath()%>/dspace-admin/metadata-schema-registry">
         	<fmt:message key="jsp.dspace-admin.list-metadata-fields.schemas"/>
         </a> |
-         <dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.site-admin\") + \"#dublincore\"%>"><fmt:message key="jsp.help"/></dspace:popup>
+         <dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.site-admin\") + \"#dublincore\"%>"><i class="fas fa-question-circle fa-xs"></i></dspace:popup>
        </h1>
       
 
@@ -106,12 +106,17 @@ if (error!=null) {
                 		<textarea class="form-control" name="scope_note" rows="3" cols="40"><%= (types[i].getScopeNote() == null ? "" : types[i].getScopeNote()) %></textarea>
                 	</div>                             
                          
-					<div class="btn-group pull-right">                             
+					<div class="btn-group col-md-offset-2">                             
                          
                             <input type="hidden" name="dc_type_id" value="<%= types[i].getFieldID() %>"/>
-                            <input class="btn btn-primary" type="submit" name="submit_update" value="<fmt:message key="jsp.dspace-admin.general.update"/>"/>             
-                         
-                            <input class="btn btn-danger" type="submit" name="submit_delete" value="<fmt:message key="jsp.dspace-admin.general.delete-w-confirm"/>"/>
+            
+                       	<button class="btn btn-default" type="submit" name="submit_update">
+				<i class="fas fa-edit"></i>
+			</button>
+
+			<button class="btn btn-danger" type="submit" name="submit_delete">
+				<i class="fas fa-trash-alt"></i>
+			</button>
                     </div>     
              </form>
          </td>
@@ -137,7 +142,11 @@ if (error!=null) {
                       <p><fmt:message key="jsp.dspace-admin.list-metadata-fields.scope"/>:</p>
                       <textarea class="form-control" name="scope_note" rows="3" cols="40"></textarea>
               
-            <input class="btn btn-primary" type="submit" name="submit_add" value="<fmt:message key="jsp.dspace-admin.general.addnew"/>"/>
+           
+		<button class="btn btn-danger" type="submit" name="submit_add">
+			<fmt:message key="jsp.dspace-admin.general.addnew"/>
+			<i class="fas fa-plus"></i>
+		</button>
         
       </form>
 
@@ -172,7 +181,12 @@ if (error!=null) {
     }
 %>
       </select>
-        <p><input class="btn btn-primary" type="submit" name="submit_move" value="<fmt:message key="jsp.dspace-admin.list-metadata-fields.movesubmit"/>"/></p>
+        <p>
+		<button class="btn btn-danger" type="submit" name="submit_move">
+			<fmt:message key="jsp.dspace-admin.list-metadata-fields.movesubmit"/>
+			<i class="fas fa-arrows-alt-h"></i>
+		</button>
+	</p>
 <% } else { %>
       
               <p class="alert alert-info"><fmt:message key="jsp.dspace-admin.list-metadata-fields.moveformnote"/><br/><br/>

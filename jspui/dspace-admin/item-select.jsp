@@ -36,7 +36,7 @@
     <%-- <h1>Select an Item</h1> --%>  
 
 <h1><fmt:message key="jsp.dspace-admin.item-select.heading"/>
-<dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.site-admin\") + \"#itempolicies\"%>"><fmt:message key="jsp.morehelp"/></dspace:popup>
+<dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.site-admin\") + \"#itempolicies\"%>"><i class="fas fa-question-circle fa-xs"></i></dspace:popup>
 </h1>
     
 <%

@@ -1071,7 +1071,7 @@ blockquote.hero {
     background-position: 0 -486px; /* Icon background position in sprite */
 }
 .sprite_organismo {
-    background: url('https://ww2.ufps.edu.co/public/imagenes/icon/organismos/organismo2.png') no-repeat;
+    background: url(../../../image/organismo2.png) no-repeat;
     width: 80px; /* Icon width */
     height: 60px; /* Icon height */
     display: inline-block; /* Display icon as inline block */
@@ -1163,7 +1163,14 @@ blockquote.hero {
 ol li a:hover {
         color: white !important;
     }
-
+.panel-primary > .panel-heading {
+  color: #ffffff !important;
+  background-color: #101010 !important;
+  border-color: #101010 !important;
+}
+.panel-primary > .panel-heading + .panel-collapse .panel-body {
+  border-top-color: #101010 !important;
+}
 
 
 

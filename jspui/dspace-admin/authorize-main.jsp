@@ -49,7 +49,7 @@
 
     <%-- <h1>Administer Authorization Policies</h1> --%>
     <h1><fmt:message key="jsp.dspace-admin.authorize-main.adm"/>
-          <dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.site-admin\") + \"#authorize\"%>"><fmt:message key="jsp.help"/></dspace:popup>
+          <dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.site-admin\") + \"#authorize\"%>"><i class="fas fa-question-circle fa-xs"></i></dspace:popup>
     </h1>
   
           <%-- <h3>Choose a resource to manage policies for:</h3> --%>

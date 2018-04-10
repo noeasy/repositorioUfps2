@@ -43,11 +43,16 @@
         <meta name="Generator" content="DSpace" />
         <link rel="shortcut icon" href="<%= request.getContextPath() %>/favicon.ico" type="image/x-icon"/>
 	<link rel="stylesheet" href="<%= request.getContextPath() %>/static/css/bootstrap/custom.css" type="text/css" />
+      <!--
 	<link type="text/css" rel="stylesheet" href="https://ww2.ufps.edu.co/assets/plugins/owl-carousel/owl-carousel/owl.carousel.min.css">
 	<link type="text/css" rel="stylesheet" href="https://ww2.ufps.edu.co/assets/plugins/layer-slider/layerslider/css/layerslider.min.css">
-		<link rel="stylesheet" href="https://ww2.ufps.edu.co/assets/css/blocks.min.css" type="text/css" />
-	    <link rel="stylesheet" href="<%= request.getContextPath() %>/static/css/jquery-ui-1.10.3.custom/redmond/jquery-ui-1.10.3.custom.css" type="text/css" />
+	<link rel="stylesheet" href="https://ww2.ufps.edu.co/assets/css/blocks.min.css" type="text/css" />
+      -->
+	<link rel="stylesheet" href="<%= request.getContextPath() %>/static/css/Ufps/owl.carousel.min.css" type="text/css" />
+	<link rel="stylesheet" href="<%= request.getContextPath() %>/static/css/Ufps/layerslider.min.css" type="text/css" />
+	<link rel="stylesheet" href="<%= request.getContextPath() %>/static/css/Ufps/blocks.min.css" type="text/css" />
 
+	<link rel="stylesheet" href="<%= request.getContextPath() %>/static/css/jquery-ui-1.10.3.custom/redmond/jquery-ui-1.10.3.custom.css" type="text/css" />
 	    <link rel="stylesheet" href="<%= request.getContextPath() %>/static/css/bootstrap/bootstrap.min.css" type="text/css" />
 	    <link rel="stylesheet" href="<%= request.getContextPath() %>/static/css/bootstrap/bootstrap-theme.min.css" type="text/css" />
 	    <link rel="stylesheet" href="<%= request.getContextPath() %>/static/css/bootstrap/dspace-theme.css" type="text/css" />
@@ -59,7 +64,7 @@
 <%
         }
 %>
-
+    <script type='text/javascript' src="<%= request.getContextPath() %>/static/js/svg-with-js/js/fontawesome-all.js"></script>	
     <script type="text/javascript" src="<%= request.getContextPath() %>/utils.js"></script>
     <script type="text/javascript" src="<%= request.getContextPath() %>/static/js/scriptaculous/prototype.js"> </script>
     <script type="text/javascript" src="<%= request.getContextPath() %>/static/js/scriptaculous/effects.js"> </script>

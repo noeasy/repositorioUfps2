@@ -37,7 +37,7 @@
 
         <%-- <h1>Describe the Collection</h1> --%>
         <h1><fmt:message key="jsp.dspace-admin.wizard-basicinfo.title"/>
-        <dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.site-admin\") + \"#wizard_description\"%>"><fmt:message key="jsp.help"/></dspace:popup>
+        <dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.site-admin\") + \"#wizard_description\"%>"><i class="fas fa-question-circle fa-xs"></i></dspace:popup>
         </h1>
 
     <form action="<%= request.getContextPath() %>/tools/collection-wizard" method="post" enctype="multipart/form-data">

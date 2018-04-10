@@ -129,12 +129,10 @@
     {
 %>     
 <dspace:sidebar>
-			<div class="panel panel-warning">
+			<div class="panel panel-danger">
 			<div class="panel-heading">
 				<fmt:message key="jsp.admintools"/>
-				<span class="pull-right">
-					<dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.site-admin\")%>"><fmt:message key="jsp.adminhelp"/></dspace:popup>
-				</span>
+				
 			</div>
 			<div class="panel-body">
                 <form method="post" action="<%=request.getContextPath()%>/dspace-admin/edit-communities">

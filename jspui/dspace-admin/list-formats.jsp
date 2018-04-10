@@ -44,7 +44,7 @@
                parentlink="/dspace-admin">
 
     <h1><fmt:message key="jsp.dspace-admin.list-formats.title"/>
-    <dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.site-admin\") + \"#bitstream\"%>"><fmt:message key="jsp.help"/></dspace:popup>
+    <dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.site-admin\") + \"#bitstream\"%>"><i class="fas fa-question-circle fa-xs"></i></dspace:popup>
     </h1>
 
     <p class="alert alert-info"><fmt:message key="jsp.dspace-admin.list-formats.text1"/></p>
@@ -125,14 +125,18 @@
                           	  <label class="sr-only" for="extensions"><fmt:message key="jsp.dspace-admin.list-formats.extensions"/></label>
                               <input class="form-control" type="text" name="extensions" value="<%= extValue %>" size="10" placeholder="<fmt:message key="jsp.dspace-admin.list-formats.extensions"/>"/>
                           </div>
-                     <div class="btn-group pull-right">
+                     <div class="btn-group col-md-offset-1">
                               <input type="hidden" name="format_id" value="<%= formats[i].getID() %>" />
-                              <input class="btn btn-primary" type="submit" name="submit_update" value="<fmt:message key="jsp.dspace-admin.general.update"/>"/>
+			   	<button  class="btn btn-default" type="submit" name="submit_update">
+					<i class="fas fa-edit"></i>
+				</button>
                           
                     <%
                       if (BitstreamFormat.findUnknown(context).getID() != formats[i].getID()) {
                     %>
-                             <input class="btn btn-danger" type="submit" name="submit_delete" value="<fmt:message key="jsp.dspace-admin.general.delete-w-confirm"/>" />
+			<button   class="btn btn-danger" type="submit" name="submit_delete">
+					<i class="fas fa-trash-alt"></i>
+				</button>
                      <% 
                       } 
                     %>
@@ -151,7 +155,11 @@
 
   <form method="post" action="">
     
-    	<input class="btn btn-success col-md-offset-5" type="submit" name="submit_add" value="<fmt:message key="jsp.dspace-admin.general.addnew"/>" />
-    
+   	<button class="btn btn-success col-md-offset-5" type="submit" name="submit_add">
+
+		<fmt:message key="jsp.dspace-admin.general.addnew"/>
+		<i class="fas fa-plus"></i>	
+	
+	</button> 
   </form>
 </dspace:layout>

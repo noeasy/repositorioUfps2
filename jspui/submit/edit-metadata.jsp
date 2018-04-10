@@ -1206,10 +1206,7 @@
         contextPath = request.getContextPath();
 %>
 
-
-
   <form action="<%= request.getContextPath() %>/submit#<%= si.getJumpToField()%>" method="post" name="edit_metadata" id="edit_metadata" onkeydown="return disableEnterKey(event);">
-
         <jsp:include page="/submit/progressbar.jsp"></jsp:include>
 
     <h1><fmt:message key="jsp.submit.edit-metadata.heading"/>
@@ -1416,5 +1413,9 @@
     		</div><br/>
 </div>    		
     </form>
+	<script type='text/javascript' src="<%= request.getContextPath() %>/static/js/svg-with-js/js/fontawesome-all.js"></script>
+	<script type='text/javascript' src="<%= request.getContextPath() %>/static/js/jquery/jquery-1.10.2.min.js"></script>
+	<script type='text/javascript' src='<%= request.getContextPath() %>/static/js/jquery/jquery-ui-1.10.3.custom.min.js'></script>
+	<!--<script type='text/javascript' src='<%= request.getContextPath() %>/static/js/bootstrap/bootstrap.min.js'></script>-->
 
 </dspace:layout>

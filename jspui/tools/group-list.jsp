@@ -43,7 +43,7 @@
     <%--  <h1>Group Editor</h1> --%>
     <h1><fmt:message key="jsp.tools.group-list.title"/>
     <%-- <dspace:popup page="/help/site-admin.html#groups">Help...</dspace:popup> --%>
-	<dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.site-admin\") + \"#groups\"%>"><fmt:message key="jsp.help"/></dspace:popup>
+	<dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.site-admin\") + \"#groups\"%>"><i class="fas fa-question-circle fa-xs"></i></dspace:popup>
     </h1>
     
   	
@@ -52,7 +52,10 @@
    	
     <form method="post" action="">
         <div class="row col-md-offset-5">
-	    	<input class="btn btn-success" type="submit" name="submit_add" value="<fmt:message key="jsp.tools.group-list.create.button"/>" />
+		<button class="btn btn-success" type="submit" name="submit_add" >
+			<fmt:message key="jsp.tools.group-list.create.button"/>
+			<i class="fas fa-plus"></i>  
+		</button>
         </div>
     </form>
 	<br/>
@@ -82,7 +85,7 @@
 %>                  
                     <form method="post" action="">
                         <input type="hidden" name="group_id" value="<%= groups[i].getID() %>"/>
-  		        <input class="btn btn-default col-md-6" type="submit" name="submit_edit" value="<fmt:message key="jsp.tools.general.edit"/>" />
+			<button class="btn btn-default col-md-3" type="submit" name="submit_edit"> <i class="fas fa-edit"></i></button>
                    </form>
 <%
 	}
@@ -93,7 +96,7 @@
 %>   
                     <form method="post" action="">
                         <input type="hidden" name="group_id" value="<%= groups[i].getID() %>"/>
-	                <input class="btn btn-danger col-md-6" type="submit" name="submit_group_delete" value="<fmt:message key="jsp.tools.general.delete"/>" />
+			<button class="btn btn-danger col-md-3" type="submit" name="submit_group_delete"><i class="fas fa-trash-alt"></i></button>
 <%
 	}
 %>	                

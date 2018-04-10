@@ -49,7 +49,7 @@
                nocache="true">
 
     <h1><fmt:message key="jsp.submit.select-collection.heading"/>
-    <dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.index\") + \"#choosecollection\"%>"><fmt:message key="jsp.morehelp"/> </dspace:popup></h1>
+    <dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.index\") + \"#choosecollection\"%>"><i class="fas fa-question-circle"></i> </dspace:popup></h1>
 
 	
 <%  if (collections.length > 0)
@@ -69,8 +69,11 @@
 %>            
             
 					<div class="input-group">
-					<label for="tcollection" class="input-group-addon">
-						<fmt:message key="jsp.submit.select-collection.collection"/>
+					<label for="tcollection" class="input-group-addon btn-info2 colorLabel">
+						<font color="white">
+							<fmt:message key="jsp.submit.select-collection.collection"/>
+						</font>
+						
 					</label>
           <dspace:selectcollection klass="form-control" id="tcollection" collection="-1" name="collection"/>
 					</div><br/>
@@ -80,7 +83,7 @@
 				<div class="row">
 					<div class="col-md-4 pull-right btn-group">
 						<input class="btn btn-default col-md-6" type="submit" name="<%=AbstractProcessingStep.CANCEL_BUTTON%>" value="<fmt:message key="jsp.submit.select-collection.cancel"/>" />
-						<input class="btn btn-primary col-md-6" type="submit" name="<%=AbstractProcessingStep.NEXT_BUTTON%>" value="<fmt:message key="jsp.submit.general.next"/>" />
+						<input class="btn btn-primary btn-info2 col-md-6" type="submit" name="<%=AbstractProcessingStep.NEXT_BUTTON%>" value="<fmt:message key="jsp.submit.general.next"/>" />
 					</div>
 				</div>		
     </form>
@@ -88,7 +91,7 @@
 	<p class="alert alert-warning"><fmt:message key="jsp.submit.select-collection.none-authorized"/></p>
 <%  } %>	
 	   <p><fmt:message key="jsp.general.goto"/><br />
-	   <a href="<%= request.getContextPath() %>"><fmt:message key="jsp.general.home"/></a><br />
-	   <a href="<%= request.getContextPath() %>/mydspace"><fmt:message key="jsp.general.mydspace" /></a>
+	   <a href="<%= request.getContextPath() %>"><fmt:message key="jsp.general.home"/> <i class="fas fa-home"></i><br />
+	   <a href="<%= request.getContextPath() %>/mydspace">Mi Perfil <i class="fas fa-user"></i></a>
 	   </p>	
 </dspace:layout>

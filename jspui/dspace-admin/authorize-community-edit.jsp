@@ -62,7 +62,7 @@
         <fmt:param>hdl:<%= community.getHandle() %></fmt:param>
         <fmt:param><%=community.getID()%></fmt:param>
     </fmt:message>
-    <dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.site-admin\") + \"#communitypolicies\"%>"><fmt:message key="jsp.help"/></dspace:popup>
+    <dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.site-admin\") + \"#communitypolicies\"%>"><i class="fas fa-question-circle fa-xs"></i></dspace:popup>
     </h1>
   
 
@@ -100,14 +100,14 @@
                 <form action="<%= request.getContextPath() %>/tools/authorize" method="post">
                     <input type="hidden" name="policy_id" value="<%= rp.getID() %>" />
                     <input type="hidden" name="community_id" value="<%= community.getID() %>" />
-                    <input class="btn btn-primary" type="submit" name="submit_community_edit_policy" value="<fmt:message key="jsp.dspace-admin.general.edit"/>" />
+		    <button class="btn btn-default" type="submit" name="submit_community_edit_policy"> <i class="fas fa-edit"></i> </button>
                 </form>
              </td>
              <td headers="t5" class="<%= row %>RowOddCol">
                 <form action="<%= request.getContextPath() %>/tools/authorize" method="post">
                     <input type="hidden" name="policy_id" value="<%= rp.getID() %>" />
                     <input type="hidden" name="community_id" value="<%= community.getID() %>" />
-                    <input class="btn btn-danger" type="submit" name="submit_community_delete_policy" value="<fmt:message key="jsp.dspace-admin.general.delete"/>" />
+		    <button class="btn btn-danger" type="submit" name="submit_community_delete_policy"> <i class="fas fa-trash-alt"></i></button>
                 </form>
              </td>
          </tr>

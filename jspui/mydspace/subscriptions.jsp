@@ -45,7 +45,7 @@
 
                 <%-- <h1>Your Subscriptions</h1> --%>
 <h1><fmt:message key="jsp.mydspace.subscriptions.title"/>
-	<dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.index\") +\"#subscribe\" %>"><fmt:message key="jsp.help"/></dspace:popup>
+	<dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.index\") +\"#subscribe\" %>"><i class="fas fa-question-circle fa-xs"></i></dspace:popup>
 </h1>
 <%
     if (updated)
@@ -70,8 +70,14 @@
 %>
             </select>
             </div>
-            <input class="btn btn-success" type="submit" name="submit_subscribe" value="<fmt:message key="jsp.collection-home.subscribe"/>" />
- 			<input class="btn btn-danger" type="submit" name="submit_clear" value="<fmt:message key="jsp.mydspace.subscriptions.remove.button"/>" />
+			<button class="btn btn-success" type="submit" name="submit_subscribe">
+				<fmt:message key="jsp.collection-home.subscribe"/>
+				<i class="fas fa-envelope-square"></i>
+			</button>
+			<button class="btn btn-danger" type="submit" name="submit_clear">
+				<fmt:message key="jsp.mydspace.subscriptions.remove.button"/>
+				<i class="far fa-trash-alt"></i>
+			</button>
 	</form>
         
 <%
@@ -99,7 +105,10 @@
                  <td class="<%= row %>RowEvenCol">
                     <form method="post" action=""> 
                         <input type="hidden" name="collection" value="<%= subscriptions[i].getID() %>" />
-			<input class="btn btn-warning" type="submit" name="submit_unsubscribe" value="<fmt:message key="jsp.mydspace.subscriptions.unsub.button"/>" />
+			<button class="btn btn-warning btn-warning2" type="submit" name="submit_unsubscribe">
+				<fmt:message key="jsp.mydspace.subscriptions.unsub.button"/>
+				<i class="fas fa-trash-alt"></i>	
+			</button>
                     </form>
                  </td>
             </tr>
@@ -120,6 +129,6 @@
 <%
     }
 %>
-<p align="center"><a href="<%= request.getContextPath() %>/mydspace"><fmt:message key="jsp.mydspace.general.goto-mydspace"/> </a></p>
+<p align="center"><a href="<%= request.getContextPath() %>/mydspace"><fmt:message key="jsp.mydspace.general.goto-mydspace"/><i class="fas fa-user"></i> </a></p>
 
 </dspace:layout>

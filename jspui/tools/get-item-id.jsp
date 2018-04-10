@@ -34,7 +34,7 @@
 
 	<%-- <h1>Edit or Delete Item</h1> --%>
 	<h1><fmt:message key="jsp.tools.get-item-id.heading"/>
-	<dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.site-admin\") + \"#items\"%>"><fmt:message key="jsp.morehelp"/></dspace:popup>
+	<dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.site-admin\") + \"#items\"%>"><i class="fas fa-question-circle fa-xs"></i></dspace:popup>
 	</h1>
     
 <%
@@ -57,13 +57,18 @@
             <label class="col-md-2" for="thandle"><fmt:message key="jsp.tools.get-item-id.handle"/></label>            
            	<span class="col-md-3"><input class="form-control" type="text" name="handle" id="thandle" value="<%= ConfigurationManager.getProperty("handle.prefix") %>/" size="12"/></span>
 			<%-- <input type="submit" name="submit" value="Find" /> --%>
-			<input class="btn btn-default" type="submit" name="submit" value="<fmt:message key="jsp.tools.get-item-id.find.button"/>" />
+			
+			<button class="btn btn-default" type="submit" name="submit">
+				<i class="fas fa-search"></i>
+			</button>
 		</div>
 		<div class="row">
 			<label class="col-md-2" for="thandle"><fmt:message key="jsp.tools.get-item-id.internal"/></label>
             <span class="col-md-3"><input class="form-control" type="text" name="item_id" id="titem_id" size="12"/></span>
 			<%-- <input type="submit" name="submit" value="Find"> --%>
-			<input class="btn btn-default" type="submit" name="submit" value="<fmt:message key="jsp.tools.get-item-id.find.button"/>" />
+			<button class="btn btn-default" type="submit" name="submit">
+				<i class="fas fa-search"></i>
+			</button>
  		</div>               
     </form>
 </dspace:layout>

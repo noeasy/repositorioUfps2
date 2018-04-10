@@ -20,18 +20,18 @@
 		<div class="form-group">
             <label class="col-md-offset-3 col-md-2 control-label" for="tlogin_email"><fmt:message key="jsp.components.login-form.email"/></label>
             <div class="col-md-3">
-            	<input class="form-control" type="text" name="login_email" id="tlogin_email" tabindex="1" />
+            	<input class="form-control" type="text" name="login_email" id="tlogin_email" tabindex="1" placeholder="Correo electr&oacute;nico"/>
             </div>
         </div>
         <div class="form-group">
             <label class="col-md-offset-3 col-md-2 control-label" for="tlogin_password"><fmt:message key="jsp.components.login-form.password"/></label>
             <div class="col-md-3">
-            	<input class="form-control" type="password" name="login_password" id="tlogin_password" tabindex="2" />
+            	<input class="form-control" type="password" name="login_password" id="tlogin_password" tabindex="2" placeholder="Contrase&ntilde;a" />
             </div>
         </div>
         <div class="row">
-        <div class="col-md-6">
-        	<input type="submit" class="btn btn-success pull-right" name="login_submit" value="<fmt:message key="jsp.components.login-form.login"/>" tabindex="3" />
+        <div class="col-md-3 col-md-offset-4">
+        	<input type="submit" class="btn btn-danger pull-right" name="login_submit" value="<fmt:message key="jsp.components.login-form.login"/>" tabindex="3" />
         </div>
         </div>
   		<p><a href="<%= request.getContextPath() %>/forgot"><fmt:message key="jsp.components.login-form.forgot"/></a></p>

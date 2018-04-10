@@ -84,7 +84,7 @@
 %>
     <h3 class="col-md-12"><fmt:message key="jsp.tools.edit-community.heading1"/>
     	<span>
-        	<dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.site-admin\") + \"#editcommunity\"%>"><fmt:message key="jsp.help"/></dspace:popup>
+        	<dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.site-admin\") + \"#editcommunity\"%>"><i class="fas fa-question-circle fa-xs"></i></dspace:popup>
         </span>
     </h3>
 <%
@@ -161,7 +161,7 @@
                         <input class="col-md-3 btn btn-default" type="submit" name="submit_set_logo" value="<fmt:message key="jsp.tools.edit-community.form.button.add-logo"/>" />
                         <input class="col-md-3 btn btn-danger" type="submit" name="submit_delete_logo" value="<fmt:message key="jsp.tools.edit-community.form.button.delete-logo"/>" />
 <%  } else { %>
-                    <input class="col-md-12 btn btn-success" type="submit" name="submit_set_logo" value="<fmt:message key="jsp.tools.edit-community.form.button.set-logo"/>" />
+                    <input class="col-md-6 col-md-offset-3 btn btn-danger" type="submit" name="submit_set_logo" value="<fmt:message key="jsp.tools.edit-community.form.button.set-logo"/>" />
 <%  } %>
                     </div>
 			</div>
@@ -190,10 +190,14 @@
 				else 
 				{ 
 					if (bAdminCreateGroup) { %>
-                    <input class="btn btn-default col-md-6" type="submit" name="submit_admins_edit" value="<fmt:message key="jsp.tools.edit-community.form.button.edit"/>" />
+				<button class="btn btn-default col-md-6" type="submit" name="submit_admins_edit">
+					<i class="fas fa-edit"></i>
+				</button>
 				<%  }
 					if (bAdminRemoveGroup) { %>
-					<input class="btn btn-danger col-md-6" type="submit" name="submit_admins_remove" value="<fmt:message key="jsp.tools.edit-community.form.button.remove"/>" />
+				<button class="btn btn-danger col-md-6" type="submit" name="submit_admins_remove">
+					<i class="fas fa-trash-alt"></i>
+				</button>
 			<%  	}
 				}
 			%>                    
@@ -211,8 +215,10 @@
      =========================================================== --%>
             <div class="row">
                 <label class="col-md-6" for="submit_authorization_edit"><fmt:message key="jsp.tools.edit-community.form.label7"/></label>
-                <span class="col-md-6 btn-group">
-                    <input class="col-md-12 btn btn-success" type="submit" name="submit_authorization_edit" value="<fmt:message key="jsp.tools.edit-community.form.button.edit"/>" />
+                <span class="col-md-3 col-md-offset-2 btn-group">
+		    <button class="col-md-8 btn btn-success" type="submit" name="submit_authorization_edit">
+                    	<i class="fas fa-edit"></i>
+	 	    </button>
                 </span>
             </div>   
     <% }
@@ -224,8 +230,10 @@
      =========================================================== --%>
             <div class="row">
                 <label for="submit_curate_community" class="col-md-6"><fmt:message key="jsp.tools.edit-community.form.label9"/></label>
-                <span class="col-md-6">
-                    <input class="col-md-12 btn btn-success" type="submit" name="submit_curate_community" value="<fmt:message key="jsp.tools.edit-community.form.button.curate"/>" />
+                <span class="col-md-3 col-md-offset-2">
+		    <button class="col-md-8 btn btn-success" type="submit" name="submit_curate_community">
+			<i class="fas fa-plus"></i>
+ 		    </button>
                 </span>
             </div>   
     <% } %>
@@ -243,11 +251,12 @@
 %>
                         <input type="hidden" name="parent_community_id" value="<%= parentID %>" />
                         <input type="hidden" name="create" value="true" />
-                        <input class="col-md-6 btn btn-success" type="submit" name="submit" value="<fmt:message key="jsp.tools.edit-community.form.button.create"/>" />
+                        <input class="col-md-3 col-md-offset-2 btn btn-success" type="submit" name="submit" value="<fmt:message key="jsp.tools.edit-community.form.button.create"/>" />
                         
                         <input type="hidden" name="parent_community_id" value="<%= parentID %>" />
                         <input type="hidden" name="action" value="<%= EditCommunitiesServlet.CONFIRM_EDIT_COMMUNITY %>" />
-                        <input class="col-md-6 btn btn-warning" type="submit" name="submit_cancel" value="<fmt:message key="jsp.tools.edit-community.form.button.cancel"/>" />
+                        <input class="col-md-3 col-md-offset-2 btn btn-warning btn-warning2" type="submit" name="submit_cancel" value="<fmt:message key="jsp.tools.edit-community.form.button.cancel"/>" />
+			
 <%
     }
     else
@@ -255,11 +264,11 @@
 %>
                         <input type="hidden" name="community_id" value="<%= community.getID() %>" />
                         <input type="hidden" name="create" value="false" />
-                        <input class="col-md-6 btn btn-success" type="submit" name="submit" value="<fmt:message key="jsp.tools.edit-community.form.button.update"/>" />
+                        <input class="col-md-3 col-md-offset-3 btn btn-success" type="submit" name="submit" value="<fmt:message key="jsp.tools.edit-community.form.button.update"/>" />
 
                         <input type="hidden" name="community_id" value="<%= community.getID() %>" />
                         <input type="hidden" name="action" value="<%= EditCommunitiesServlet.CONFIRM_EDIT_COMMUNITY %>" />
-                        <input class="col-md-6 btn btn-warning" type="submit" name="submit_cancel" value="<fmt:message key="jsp.tools.edit-community.form.button.cancel"/>" />
+                        <input class="col-md-3  btn btn-warning btn-warning2" type="submit" name="submit_cancel" value="<fmt:message key="jsp.tools.edit-community.form.button.cancel"/>" />
 <%
     }
 %>

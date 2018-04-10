@@ -49,7 +49,7 @@
 
         <%-- <h1>News Editor</h1> --%>
       <h1><fmt:message key="jsp.dspace-admin.news-main.heading"/>
-      <dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.site-admin\") + \"#editnews\"%>"><fmt:message key="jsp.help"/></dspace:popup>
+      <dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.site-admin\") + \"#editnews\"%>"><i class="fas fa-question-circle fa-xs"></i></dspace:popup>
 	  </h1>
 			
 		<form action="<%= request.getContextPath() %>/dspace-admin/news-edit" method="post">			

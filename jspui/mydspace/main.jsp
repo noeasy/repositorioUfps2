@@ -78,14 +78,14 @@
 	<div class="panel panel-primary">
         <div class="panel-heading">
                     <fmt:message key="jsp.mydspace"/>: <%= Utils.addEntities(user.getFullName()) %>
-	                <span class="pull-right"><dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.index\") + \"#mydspace\"%>"><fmt:message key="jsp.help"/></dspace:popup></span>
+	                <span class="pull-right"><dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.index\") + \"#mydspace\"%>"><i class="fas fa-question-circle fa-lg"></i></dspace:popup></span>
         </div>         
 
 		<div class="panel-body">
 		    <form action="<%= request.getContextPath() %>/mydspace" method="post">
 		        <input type="hidden" name="step" value="<%= MyDSpaceServlet.MAIN_PAGE %>" />
                 <input class="btn btn-success" type="submit" name="submit_new" value="<fmt:message key="jsp.mydspace.main.start.button"/>" />
-                <input class="btn btn-info" type="submit" name="submit_own" value="<fmt:message key="jsp.mydspace.main.view.button"/>" />
+                <input class="btn btn-info btn-info2" type="submit" name="submit_own" value="<fmt:message key="jsp.mydspace.main.view.button"/>" />
 		    </form>
 		
 		
@@ -276,7 +276,8 @@
                 <form action="<%= request.getContextPath() %>/mydspace" method="post">
                     <input type="hidden" name="step" value="<%= MyDSpaceServlet.MAIN_PAGE %>"/>
                     <input type="hidden" name="workspace_id" value="<%= workspaceItems[i].getID() %>"/>
-                    <input class="btn btn-danger" type="submit" name="submit_delete" value="<fmt:message key="jsp.mydspace.general.remove" />"/>
+		    <button class="btn btn-danger" type="submit" name="submit_delete"><i class="fas fa-trash-alt"></i></button>	
+			
                 </form> 
             </td>
         </tr>

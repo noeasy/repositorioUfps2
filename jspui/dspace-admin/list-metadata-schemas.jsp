@@ -42,7 +42,7 @@
 
 
         <h1><fmt:message key="jsp.dspace-admin.list-metadata-schemas.title"/>
-        <dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.site-admin\") + \"#dublincore\"%>"><fmt:message key="jsp.help"/></dspace:popup>
+        <dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.site-admin\") + \"#dublincore\"%>"><i class="fas fa-question-circle fa-xs"></i></dspace:popup>
 		</h1>
   
 <%
@@ -80,8 +80,13 @@ if (error!=null) {
 		<% if ( schemas[i].getSchemaID() != 1 ) { %>
                 <form method="post" action="">
                     <input type="hidden" name="dc_schema_id" value="<%= schemas[i].getSchemaID() %>"/>
-                    <input class="btn btn-primary" type="button" name="submit_update" value="<fmt:message key="jsp.dspace-admin.general.update"/>" onclick="javascript:document.schema.namespace.value='<%= schemas[i].getNamespace() %>';document.schema.short_name.value='<%= schemas[i].getName() %>';document.schema.dc_schema_id.value='<%= schemas[i].getSchemaID() %>';return null;"/>
-                    <input class="btn btn-danger" type="submit" name="submit_delete" value="<fmt:message key="jsp.dspace-admin.general.delete-w-confirm"/>"/>
+	            <button class="btn btn-default" type="button" name="submit_update" onclick="javascript:document.schema.namespace.value='<%= schemas[i].getNamespace() %>';document.schema.short_name.value='<%= schemas[i].getName() %>';document.schema.dc_schema_id.value='<%= schemas[i].getSchemaID() %>';return null;">
+			<i class="fas fa-edit"></i>
+		    </button>
+                    
+		    <button class="btn btn-danger" type="submit" name="submit_delete">
+			<i class="fas fa-trash-alt"></i>
+		    </button>
                 </form>
 		    <% } %>
                 </td>
@@ -112,7 +117,11 @@ if (error!=null) {
 	    </div>
         <br/><br/><br/>
        <div class="row col-md-offset-5">
-       		<input class="btn btn-success col-md-3" type="submit" name="submit_add" value="<fmt:message key="jsp.dspace-admin.general.save"/>"/>
+       		
+		<button class="btn btn-success col-md-3" type="submit" name="submit_add">
+			<fmt:message key="jsp.dspace-admin.general.save"/>
+			<i class="fas fa-save"></i>
+		</button>
        </div>
 	
   </form>

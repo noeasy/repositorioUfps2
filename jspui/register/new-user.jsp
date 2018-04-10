@@ -55,9 +55,13 @@
             				<label class="col-md-offset-3 col-md-2 control-label" for="temail"><fmt:message key="jsp.register.new-user.email.field"/></label>
                             <div class="col-md-3"><input class="form-control" type="text" name="email" id="temail" /></div>
                         </div>
-                        <div class="row col-md-offset-5">
+                        <div class="row col-md-offset-6">
                                 <%-- <input type="submit" name="submit" value="Register"> --%>
-							<input class="btn btn-default col-md-4" type="submit" name="submit" value="<fmt:message key="jsp.register.new-user.register.button"/>" />
+				
+				<button class="btn btn-danger col-md-2" type="submit" name="submit">
+					<fmt:message key="jsp.register.new-user.register.button"/>
+					<i class="fas fa-envelope-open"></i>
+				</button>
 						</div>
     </form>
     <%-- <p>If you or your department are interested in registering with DSpace, please
@@ -65,6 +69,6 @@
     <br/>
 	<div class="alert alert-info"><fmt:message key="jsp.register.new-user.info3"/></div>
 
-    <dspace:include page="/components/contact-info.jsp" />
+    <!--<dspace:include page="/components/contact-info.jsp" />-->
 
 </dspace:layout>

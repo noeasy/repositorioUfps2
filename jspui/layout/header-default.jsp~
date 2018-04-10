@@ -47,17 +47,27 @@
     <head>
         <title><%= siteName %>: <%= title %></title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <meta name="Generator" content="<%= generator %>" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="<%= request.getContextPath() %>/favicon.ico" type="image/x-icon"/>
-	
-	
-	    <link rel="stylesheet" href="<%= request.getContextPath() %>/static/css/jquery-ui-1.10.3.custom/redmond/jquery-ui-1.10.3.custom.css" type="text/css" />
+	<link rel="stylesheet" href="<%= request.getContextPath() %>/static/css/bootstrap/custom.css" type="text/css" />
+        <!--
+	<link type="text/css" rel="stylesheet" href="https://ww2.ufps.edu.co/assets/plugins/owl-carousel/owl-carousel/owl.carousel.min.css">
+	<link type="text/css" rel="stylesheet" href="https://ww2.ufps.edu.co/assets/plugins/layer-slider/layerslider/css/layerslider.min.css">
+		<link rel="stylesheet" href="https://ww2.ufps.edu.co/assets/css/blocks.min.css" type="text/css" />
+ -->
+	<link rel="stylesheet" href="<%= request.getContextPath() %>/static/css/Ufps/owl.carousel.min.css" type="text/css" />
+	<link rel="stylesheet" href="<%= request.getContextPath() %>/static/css/Ufps/layerslider.min.css" type="text/css" />
+	<link rel="stylesheet" href="<%= request.getContextPath() %>/static/css/Ufps/blocks.min.css" type="text/css" />
 
+        <link rel="stylesheet" href="<%= request.getContextPath() %>/static/css/jquery-ui-1.10.3.custom/redmond/jquery-ui-1.10.3.custom.css" type="text/css" />
+	
 	    <link rel="stylesheet" href="<%= request.getContextPath() %>/static/css/bootstrap/bootstrap.min.css" type="text/css" />
 	    <link rel="stylesheet" href="<%= request.getContextPath() %>/static/css/bootstrap/bootstrap-theme.min.css" type="text/css" />
 	    <link rel="stylesheet" href="<%= request.getContextPath() %>/static/css/bootstrap/dspace-theme.css" type="text/css" />
 	    <link rel="stylesheet" href="<%= request.getContextPath() %>/static/css/bootstrap/footer-v1.min.css" type="text/css" />
+	    	
             
 <%
     if (!"NONE".equals(feedRef))
@@ -85,15 +95,16 @@
 %>
        	
 
- 
+	<script type='text/javascript' src="<%= request.getContextPath() %>/static/js/svg-with-js/js/fontawesome-all.js"></script>
 	<script type='text/javascript' src="<%= request.getContextPath() %>/static/js/jquery/jquery-1.10.2.min.js"></script>
 	<script type='text/javascript' src='<%= request.getContextPath() %>/static/js/jquery/jquery-ui-1.10.3.custom.min.js'></script>
 	<script type='text/javascript' src='<%= request.getContextPath() %>/static/js/bootstrap/bootstrap.min.js'></script>
 	<script type='text/javascript' src='<%= request.getContextPath() %>/static/js/holder.js'></script>
 	<script type="text/javascript" src="<%= request.getContextPath() %>/utils.js"></script>
         <script type="text/javascript" src="<%= request.getContextPath() %>/static/js/choice-support.js"> </script>
+	<!--
 	<link type="text/css" rel="stylesheet" href="https://ww2.ufps.edu.co/assets/plugins/bootstrap/css/bootstrap.min.css">
-
+-->
 
 
 
@@ -159,22 +170,7 @@
 </header>
 
 <main id="content" role="main">
-<!--
-<div class="container banner" style="padding:0px;">
-	<div class="row">
 
-		<div class="col-md-9 brand">
-		<h1><fmt:message key="jsp.layout.header-default.brand.heading" /></h1>
-        <fmt:message key="jsp.layout.header-default.brand.description" /> 
-        </div> pull-right
-
-        <div class="col-md-4 col-sm-4 col-xs-5 transparente"><img class="img-responsive" src="<%= request.getContextPath() %>/image/logo.png" alt="Logo Ufps" />
-        </div>
-
-   <div class="col-md-2 col-ms-1 col-xs-2 pull-right transparente"><img class="header-banner pull-right" src="<%= request.getContextPath() %>/image/escudo_colombia.png" alt="Escudo de colombia" />
-    </div>
-
--->
 	</div>
 </div>
 <div class="wrapper">
@@ -189,12 +185,12 @@
                         <div class="col-md-4 col-sm-4 col-xs-5">
                             <a href="https://ww2.ufps.edu.co/">
                                 <img id="logo-header"
-                                     src="https://ww2.ufps.edu.co/public/imagenes/template/header/logo_ufps.png" alt="Logo UFPS">
+                                     src="<%= request.getContextPath() %>/image/logo_ufps.png" alt="Logo UFPS">
                             </a>
                         </div>
                         <div class="col-md-2 col-ms-1 col-xs-2 pull-right">
                             <a href="http://www.colombia.co/"><img class="header-banner"
-                                                                   src="https://ww2.ufps.edu.co/public/imagenes/template/header/escudo_colombia.png"
+                                                                   src="<%= request.getContextPath() %>/image/escudo_colombia.png"
                                                                    alt="Escudo de Colombia"></a>
                         </div>
                     </div>
@@ -226,7 +222,15 @@
 <%
     }
 %>
-
+<script type='text/javascript' src="<%= request.getContextPath() %>/static/js/svg-with-js/js/fontawesome-all.js"></script>
+	<script type='text/javascript' src="<%= request.getContextPath() %>/static/js/jquery/jquery-1.10.2.min.js"></script>
+	<script type='text/javascript' src='<%= request.getContextPath() %>/static/js/jquery/jquery-ui-1.10.3.custom.min.js'></script>
+	<script type='text/javascript' src='<%= request.getContextPath() %>/static/js/bootstrap/bootstrap.min.js'></script>
+	<script type='text/javascript' src='<%= request.getContextPath() %>/static/js/holder.js'></script>
+	<script type="text/javascript" src="<%= request.getContextPath() %>/utils.js"></script>
+        <script type="text/javascript" src="<%= request.getContextPath() %>/static/js/choice-support.js"> </script>
+	<!--
+	<link type="text/css" rel="stylesheet" href="https://ww2.ufps.edu.co/assets/plugins/bootstrap/css/bootstrap.min.css">
 
         <%-- Page contents --%>
 <div class="container">
