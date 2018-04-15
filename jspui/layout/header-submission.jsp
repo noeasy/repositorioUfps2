@@ -168,7 +168,20 @@
 <%
     }
 %>
+<!-- ICONOS REDES SOCIALES -->
+<div class="cuadroredes">
+    <ul class="social-icons margin-top-10">
+        <li class="tooltips" data-toggle="tooltip" data-placement="bottom" data-original-title="Síguenos en Facebook"><a
+                href="https://www.facebook.com/ecoteufps" class="rounded social_facebook social_facebook2"></a>
+        </li>
+        <li class="tooltips" data-toggle="tooltip" data-placement="bottom" data-original-title="Síguenos en Twitter"><a
+                href="https://twitter.com/bibliotecaUFPS" class="rounded social_twitter2"></a></li>
+        <li class="tooltips" data-toggle="tooltip" data-placement="bottom" data-original-title="Síguenos en Youtube"><a
+                href="https://www.youtube.com/user/beclufps" class="rounded social_youtube2"></a></li>
 
+    </ul>
+</div>
+<!-- FIN ICONOS REDES SOCIALES -->
 
         <%-- Page contents --%>
 <div class="container">

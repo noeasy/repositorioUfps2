@@ -340,7 +340,7 @@
 
         <%-- <h1>Submit: Upload a File</h1> --%>
 		<h1><fmt:message key="jsp.submit.choose-file.heading"/>
-			<dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.index\") + \"#upload\"%>"><fmt:message key="jsp.morehelp"/></dspace:popup>
+			<dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.index\") + \"#upload\"%>"><i class="fas fa-question-circle"></i></dspace:popup>
 		</h1>
     
         <%-- <p>Please enter the name of
@@ -371,7 +371,7 @@
                     </div>
             </div><br/>
             
-            
+     
 <%if (html5Upload) {%>
       <div class="resumable-error">
           <fmt:message key="jsp.submit.choose-file.upload-resumable.unsupported"/>
@@ -399,14 +399,14 @@
       <div class="resumable-files">
           <div class="panel panel-default">
               <div class="panel-heading">
-                  Files To Upload
+                  Archivos a subir
               </div>
 
               <table class="table resumable-list">
                   <thead>
                       <th>#</th>
-                      <th>Name</th>
-                      <th>Status</th>
+                      <th>Nombre</th>
+                      <th>Estado</th>
                   </thead>
                   <tbody></tbody>
               </table>

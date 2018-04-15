@@ -60,7 +60,7 @@
 <%
 		}
 %>
-			<!--<small><fmt:message key="jsp.workspace.ws-main.wsitem"/></small>-->
+			<small><fmt:message key="jsp.workspace.ws-main.wsitem"/></small>
 	        <dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.index\") + \"#mydspace\"%>"><i class="fas fa-question-circle"></i></dspace:popup>
 
 		</h3>

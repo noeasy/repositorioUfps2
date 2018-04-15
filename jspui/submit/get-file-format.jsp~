@@ -158,6 +158,7 @@
         <%= SubmissionController.getSubmissionParameters(context, request) %>
 
         <%-- <center><p><input type="submit" name="submit" value="Set File Format"></p></center> --%>
+		<input class="btn btn-danger col-md-2 col-md-offset-5" type="submit" name="submit" value="<fmt:message key="jsp.submit.general.submit"/>" />
 		<button class="btn btn-danger col-md-2 col-md-offset-5" type="submit" name="submit">
 			Guardar
 			<i class="fas fa-save"></i>
