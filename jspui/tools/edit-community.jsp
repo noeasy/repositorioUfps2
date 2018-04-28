@@ -96,7 +96,7 @@
         <fmt:param><%= community.getHandle() %></fmt:param>
         </fmt:message>
         <span>
-        	<dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.site-admin\") + \"#editcommunity\"%>"><fmt:message key="jsp.help"/></dspace:popup>
+        	<dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.site-admin\") + \"#editcommunity\"%>"><i class="fas fa-question-circle fa-xs"></i></dspace:popup>
         </span>	
     </h3>
     <% if(bDelete) { %>

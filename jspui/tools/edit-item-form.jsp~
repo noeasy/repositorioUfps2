@@ -333,7 +333,7 @@
                     <form method="post" action="<%= request.getContextPath() %>/tools/edit-item">
                         <input type="hidden" name="item_id" value="<%= item.getID() %>" />
                         <input type="hidden" name="action" value="<%= EditItemServlet.START_PRIVATING %>" />
-                        <input class="btn btn-danger col-md-12" type="submit" name="submit" value="<fmt:message key="jsp.tools.edit-item-form.privating-w-confirm.button"/>"/>
+                        <input class="btn btn-default col-md-12" type="submit" name="submit" value="<fmt:message key="jsp.tools.edit-item-form.privating-w-confirm.button"/>"/>
                     </form>
 <%
     }

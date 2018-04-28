@@ -38,14 +38,14 @@
                nocache="true">
   
 
-<table width="95%">
+<table width="95%" >
     <tr>
       <td>
 	<%-- <h1>Enter Default Item Metadata</h1> --%>
-	<h1><fmt:message key="jsp.dspace-admin.wizard-default-item.enter"/></h1>
+	<h1><fmt:message key="jsp.dspace-admin.wizard-default-item.enter"/><dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.site-admin\") + \"#wizard_default\"%>"><i class="fas fa-question-circle fa-xs"></i></dspace:popup></h1>
       </td>
-      <td class="standard" align="right">
-        <dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.site-admin\") + \"#wizard_default\"%>"><i class="fas fa-question-circle fa-xs"></i></dspace:popup>
+      <td class="standard">
+        
       </td>
     </tr>
   </table>
@@ -100,14 +100,14 @@
         <input type="hidden" name="stage" value="<%= CollectionWizardServlet.DEFAULT_ITEM %>" />
 
         <center>
-            <table border="0" width="80%">
+            <table border="0" width="80%" >
                 <tr>
                     <td width="100%">&nbsp;
                         
                     </td>
                     <td>
                         <%-- <input type="submit" name="submit_next" value="Next &gt;" /> --%>
-                        <input type="submit" name="submit_next" value="<fmt:message key="jsp.dspace-admin.general.next.button"/>" />
+                        <input type="submit" class="btn btn-primary" name="submit_next" value="<fmt:message key="jsp.dspace-admin.general.next.button"/>" />
                     </td>
                 </tr>
             </table>

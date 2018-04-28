@@ -48,7 +48,7 @@
 
 %>
 
-       <div class="navbar-header">
+       <div class="navbar-header ">
          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
            <span class="icon-bar"></span>
            <span class="icon-bar"></span>
@@ -91,7 +91,7 @@
                <li><a href="<%= request.getContextPath() %>/dspace-admin/format-registry"><fmt:message key="jsp.layout.navbar-admin.formatregistry"/></a></li>
                <li class="divider"></li>
                <li><a href="<%= request.getContextPath() %>/dspace-admin/news-edit"><fmt:message key="jsp.layout.navbar-admin.editnews"/></a></li>
-               <li class="divider"></li>
+               
                <li><a href="<%= request.getContextPath() %>/dspace-admin/license-edit"><fmt:message key="jsp.layout.navbar-admin.editlicense"/></a></li>
             </ul>
           </li>          
@@ -117,4 +117,5 @@
     </ul>
           
 	</div>
+
 </nav>

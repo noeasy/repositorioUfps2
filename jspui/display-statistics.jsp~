@@ -93,7 +93,7 @@
 </c:forEach>
 </table>
 
-<% if(isItem) { %>
+<% if(true) { %>
 
 <h2><fmt:message key="jsp.statistics.heading.filedownloads"/></h2>
 <table class="statsTable">

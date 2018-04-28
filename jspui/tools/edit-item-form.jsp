@@ -210,7 +210,7 @@
 
     <%-- <h1>Edit Item</h1> --%>
         <h1><fmt:message key="jsp.tools.edit-item-form.title"/>
-        <dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.collection-admin\") + \"#editmetadata\"%>"><fmt:message key="jsp.morehelp"/></dspace:popup>
+        <dspace:popup page="<%= LocaleSupport.getLocalizedMessage(pageContext, \"help.collection-admin\") + \"#editmetadata\"%>"><i class="fas fa-question-circle"></i></dspace:popup>
         </h1>
     
     <%-- <p><strong>PLEASE NOTE: These changes are not validated in any way.

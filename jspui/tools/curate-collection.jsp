@@ -77,7 +77,7 @@
 		</div>
 		  <br/>
           <div class="col-md-4 row pull-right">
-          <input class="btn btn-warning col-md-6" type="submit" name="submit_collection_queue" value="<fmt:message key="jsp.tools.curate.queue.button"/>" />
+          <input class="btn btn-warning btn-warning2 col-md-6" type="submit" name="submit_collection_queue" value="<fmt:message key="jsp.tools.curate.queue.button"/>" />
           <input class="btn btn-primary col-md-6" type="submit" name="submit_collection_curate" value="<fmt:message key="jsp.tools.curate.perform.button"/>" />
           </div>
         </form>
@@ -88,7 +88,11 @@
             <input type="hidden" name="collection_id" value="<%= collectionID %>"/>
             <input type="hidden" name="community_id" value="<%= communityID %>" />
             <input type="hidden" name="action" value="<%=EditCommunitiesServlet.START_EDIT_COLLECTION %>" />
-            <input class="btn btn-default" type="submit" value="<fmt:message key="jsp.tools.curate.return.collection.button"/>" />
+            
+            <button class="btn btn-danger" type="submit">
+		<i class="fas fa-home"></i>
+		<fmt:message key="jsp.tools.curate.return.collection.button"/>
+            </button>
           </form>
        </div>
 

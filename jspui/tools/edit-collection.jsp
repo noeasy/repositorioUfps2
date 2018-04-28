@@ -151,7 +151,7 @@
     </fmt:message>
 <% } %>    
 	<span>
-		<dspace:popup page="/help/site-admin.html#editcollection"><fmt:message key="jsp.help"/></dspace:popup>
+		<dspace:popup page="/help/site-admin.html#editcollection"><i class="fas fa-question-circle"></i></dspace:popup>
 	</span>
 	</h3>    
 <% if(bDeleteButton) { %>
@@ -176,13 +176,13 @@
         	<div class="row">        
                 <label class="col-md-3" for="name"><fmt:message key="jsp.tools.edit-collection.form.label1"/></label>
                 <span class="col-md-9">
-                	<input class="form-control" type="text" name="name" value="<%= Utils.addEntities(name) %>" required />
+                	<input class="form-control" type="text" name="name" value="<%= Utils.addEntities(name) %>" />
                 </span>
             </div><br/>    
             <div class="row">        
                 <label class="col-md-3" for="short_description"><fmt:message key="jsp.tools.edit-collection.form.label2"/></label>
                 <span class="col-md-9">
-                	<input class="form-control" type="text" name="short_description" value="<%= Utils.addEntities(shortDesc) %>" size="50" required/>
+                	<input class="form-control" type="text" name="short_description" value="<%= Utils.addEntities(shortDesc) %>" size="50"/>
                 </span>	
             </div><br/>
             <div class="row">        
@@ -459,7 +459,7 @@
 %>
                         <input type="hidden" name="community_id" value="<%= community.getID() %>" />
                         <input type="hidden" name="create" value="true" />
-                        <input class="btn btn-success col-md-6" type="submit" name="submit" value="<fmt:message key="jsp.tools.edit-collection.form.button.create2"/>" />
+                        <input class="col-md-3 col-md-offset-3 btn btn-success type="submit" name="submit" value="<fmt:message key="jsp.tools.edit-collection.form.button.create2"/>" />
 <%
     }
     else
@@ -468,13 +468,13 @@
                         <input type="hidden" name="community_id" value="<%= community.getID() %>" />
                         <input type="hidden" name="collection_id" value="<%= collection.getID() %>" />
                         <input type="hidden" name="create" value="false" />
-                        <input class="btn btn-success col-md-6" type="submit" name="submit" value="<fmt:message key="jsp.tools.edit-collection.form.button.update"/>" />
+                        <input class="col-md-3 col-md-offset-3 btn btn-success" type="submit" name="submit" value="<fmt:message key="jsp.tools.edit-collection.form.button.update"/>" />
 <% 
     }
 %>
                         <input type="hidden" name="community_id" value="<%= community.getID() %>" />
                         <input type="hidden" name="action" value="<%= EditCommunitiesServlet.CONFIRM_EDIT_COLLECTION %>" /> 
-                        <input class="btn btn-warning col-md-6" type="submit" name="submit_cancel" value="<fmt:message key="jsp.tools.edit-collection.form.button.cancel"/>" />
+                        <input class="col-md-3  btn btn-warning btn-warning2" type="submit" name="submit_cancel" value="<fmt:message key="jsp.tools.edit-collection.form.button.cancel"/>" />
 </div>                        
     </form>
     </div>

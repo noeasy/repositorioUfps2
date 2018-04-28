@@ -65,6 +65,7 @@
 					<div class="row">
                     <%-- <input type="submit" name="submit_community" value="Manage a Community's Policies"> --%>
                     	<input class="btn btn-default col-md-12" type="submit" name="submit_community" value="<fmt:message key="jsp.dspace-admin.authorize-main.manage1"/>" />
+			
 					</div>
 					<div class="row">
                     <%-- <input type="submit" name="submit_collection" value="Manage Collection's Policies"> --%>

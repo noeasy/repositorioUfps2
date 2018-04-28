@@ -27,6 +27,6 @@
 	<p><fmt:message key="jsp.register.password-changed.info"/></p>
 
     <%-- <p><a href="<%= request.getContextPath() %>/">Go to DSpace Home</a></p> --%>
-	<p><a href="<%= request.getContextPath() %>/"><fmt:message key="jsp.register.password-changed.link"/></a></p>
+	<p><a href="<%= request.getContextPath() %>/"><fmt:message key="jsp.register.password-changed.link"/><i class="fas fa-home"></i></a></p>
 
 </dspace:layout>

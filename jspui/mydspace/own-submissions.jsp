@@ -77,5 +77,5 @@
 %>
 
     <%-- <p align="center"><a href="<%= request.getContextPath() %>/mydspace">Back to My DSpace</a></p> --%>
-	<p align="center"><a href="<%= request.getContextPath() %>/mydspace"><fmt:message key="jsp.mydspace.general.backto-mydspace"/></a></p>
+	<p align="center"><a href="<%= request.getContextPath() %>/mydspace"><fmt:message key="jsp.mydspace.general.backto-mydspace"/><i class="fas fa-home"></i></a></p>
 </dspace:layout>
